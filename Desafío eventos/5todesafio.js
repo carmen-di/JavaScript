@@ -26,8 +26,9 @@ function calcularTotal(entradas, recital) {
 
 let boton = document.getElementById("boton");
 
-boton.addEventListener("click" , function(){
+boton.addEventListener("click" , function(e){
 
+    e.preventDefault()
     let select = document.getElementById("banda");
     let cantEntrada = document.getElementById("cant_entradas");
     let resumen = document.getElementById("resumen")
