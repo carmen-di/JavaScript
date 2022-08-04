@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap');
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+#gridContenedor {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "contenedor";
+    grid-template-rows: auto auto;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    
+}
+
+.fondo-header {
+    background-color:  #cf6983;}
+
+a {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+    text-align: center;
+    color: #3F4E4F;
+}
+
+h4 {
+    text-align: center;
+    color: #3F4E4F;
+    padding-bottom: 20px;
+}
+
+.contenedor {
+    grid-area: contenedor;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    margin-top: 30px; 
+    margin-bottom: 100px;
+    margin-top: 10px;
+
+}
+
+.card {
+    margin-left: 0.5rem;
+
+}
+
+.btn {
+    background-color: #cf6983;
+    border-color: #cf6983; 
+    color: white;}
+
+.precio {
+    font-size: large;
+}

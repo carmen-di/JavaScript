@@ -19,6 +19,12 @@ const Recital =
         artista:'Måneskin',
         precio: 9500,
         img: "images/maneskin.png"
+    },
+    {
+        id:4,
+        artista:'Primavera Sound ',
+        precio: 16000,
+        img: "images/primavera.png"
     }
 ];
 
@@ -27,6 +33,7 @@ console.log(contenedorCards)
 const contenedorTabla = document.getElementById("tabla")
 console.log(contenedorTabla)
 const precioTotal = document.getElementById('precioTotal')
+let boton = document.getElementById("boton");
 
 function mostrarProductos(array) {
     contenedorCards.innerHTML = ""
@@ -43,7 +50,7 @@ function mostrarProductos(array) {
                     </div>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center">
-                            <button onclick="agregarCarrito(${element.id})" class="btn btn-outline-dark mt-auto">Comprar</button>
+                            <button onclick="agregarCarrito(${element.id})" class="btn btn-click btn-outline-dark mt-auto">Comprar</button>
                         </div>
                     </div>
                 </div>
@@ -55,6 +62,9 @@ function mostrarProductos(array) {
 function mostrarCarrito(evento){
     let fila = document.createElement("tr");
     fila.innerHTML = `<td>${evento.cantidad}</td>
+                    <td> <button class="btn btn-info btn-sm" >+</button>
+                        <button onclick="eliminarDelCarrito(${evento.id})"class="btn btn-danger btn-sm" >-</button>
+                    </td>
                     <td>${evento.artista}</td>
                     <td>$${evento.precio}</td>`;
 
@@ -72,6 +82,15 @@ function carritoTotal(carrito){
     precioTotal.innerText = total;
 }
 
+boton.addEventListener('click', () => {
+    Swal.fire({
+        title: '¿Desea continuar con la compra?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Sí',
+        denyButtonText: `No`,
+      })
+})
 
 function capturarStorage() {
     return JSON.parse(localStorage.getItem("carrito")) || []
@@ -89,6 +108,22 @@ function agregarCarrito(idRecital) {
     console.log(carrito)
     mostrarCarrito(recitalSelec);
     carritoTotal(carrito);
+    Toastify({
+        text: "Entrada seleccionada",
+        style: {
+            background: "#0be6a0",
+            fontfamily: 'Oswald',
+            fontSize: "20px",
+        }
+     }).showToast();
+}
+
+const eliminarDelCarrito = (prodId) => {
+    const item = carrito.find((prod) => prod.id === prodId)
+    const indice = carrito.indexOf(item) 
+    carrito.splice(indice, 1) 
+    mostrarCarrito(indice) 
+    console.log(carrito)
 }
 
 mostrarProductos(Recital)
