@@ -1,33 +1,5 @@
 console.log("8vodesafio.js")
 
-// const Recital = 
-// [
-//     {
-//         id:1,
-//         artista: 'Dua Lipa',
-//         precio: 10500,
-//         img: "images/dua.png"
-//     },
-//     {
-//         id:2,
-//         artista: 'Coldplay',
-//         precio: 13500,
-//         img: "images/coldplay.jpg"
-//     },
-//     {
-//         id:3,
-//         artista:'Måneskin',
-//         precio: 9500,
-//         img: "images/maneskin.png"
-//     },
-//     {
-//         id:4,
-//         artista:'Primavera Sound ',
-//         precio: 16000,
-//         img: "images/primavera.png"
-//     }
-// ];
-
 const contenedorCards = document.getElementById("contCards")
 console.log(contenedorCards)
 const contenedorTabla = document.getElementById("tabla")
