@@ -1,5 +1,6 @@
 let buttonLogin = document.getElementById('login');
 buttonLogin.addEventListener('click', ()=>{
+    e.preventDefault()
     let email = document.getElementById('email').value;
     let pass = document.getElementById('contraseña').value;
     login(email, pass);
@@ -21,7 +22,7 @@ const login = async (email,pass) =>
                 console.log('login correcto');
                 localStorage.setItem('user', JSON.stringify(user));
                 found = true;
-                window.location.href = "index.html";
+                window.location.href = "8vodesafio.html";
             }
         }
         if(!found)
