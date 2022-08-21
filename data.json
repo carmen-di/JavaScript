@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "artista": "Dua Lipa",
         "precio": "10500",
         "img": "images/dua.png"
@@ -22,5 +22,17 @@
         "artista": "Primavera Sound",
         "precio": "16000",
         "img": "images/primavera.png"
+    },
+    {
+        "id": 5,
+        "artista": "Árbol",
+        "precio": "2500",
+        "img": "images/arbol.jpg"
+    },
+    {
+        "id": 6,
+        "artista": "Cordera",
+        "precio": "4000",
+        "img": "images/cordera.jpg"
     }
 ]

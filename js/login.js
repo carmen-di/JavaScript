@@ -17,12 +17,12 @@ const login = async (email,pass) =>
         let found = false;
         for (const user of users)
         {
-            if(email.toLowerCase() === user.email && pass === user.password)
+            if(email.toLowerCase() === user.email && contraseña === user.password)
             {
                 console.log('login correcto');
                 localStorage.setItem('user', JSON.stringify(user));
                 found = true;
-                window.location.href = "8vodesafio.html";
+                window.location.href = "./index.html";
             }
         }
         if(!found)

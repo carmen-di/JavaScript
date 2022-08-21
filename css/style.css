@@ -8,7 +8,8 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-}
+    background-color:  rgba(252, 252, 252, 1);
+ }
 
 #gridContenedor {
     display: grid;
@@ -25,16 +26,20 @@ body {
     align-items: center;
     justify-content: space-around;
     list-style: none;
-    
+    background-color:  rgba(233, 164, 199, 1);
 }
 
 .fondo-header {
-    background-color:  #cf6983;}
+    background-color:  rgba(233, 164, 199, 1);}
 
 a {
     font-size: 40px;
-    color: white;
+    color: rgba(255, 255, 255, 1);
     font-weight: bold;
+}
+
+a:hover{
+  color: #3F4E4F;
 }
 
 h1 {
@@ -46,34 +51,65 @@ h1 {
     grid-area: header;
     text-align: center;
     color: #3F4E4F;
+    font-weight: 800;
+    font-size: 4rem;
 }
 
 h4 {
     text-align: center;
     color: #3F4E4F;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+}
+
+h3 {
+  color: #3F4E4F;
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: 60px;
 }
 
 .contenedor {
-    grid-area: contenedor;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
-    margin-top: 30px; 
-    margin-bottom: 100px;
-    margin-top: 10px;
+  grid-area: contenedor;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  margin-top: 30px; 
+  margin-bottom: 100px;
+  margin-top: 10px;
 
 }
 
 .card {
-    margin-left: 0.5rem;
+  margin-left: 0.5rem;
 
 }
 
+.btninfo{
+  background-color: rgba(233, 164, 199, 1);
+  border-color: rgba(233, 164, 199, 1);
+  font-weight: 700;
+  border-radius: 0%;
+  color: white;
+}
+
 .btn {
-    background-color: #cf6983;
-    border-color: #cf6983; 
-    color: white;}
+  background-color: #cf6983;
+  border-color: #cf6983; 
+  color: white;
+  }
+
+.btn-primary {
+  background-color: #477ed1;
+  border-color: #477ed1;
+}
+
+.btn-danger {
+  background-color: #e34034;
+  border-color: #e34034;
+}
 
 .precio {
     font-size: large;
@@ -111,6 +147,9 @@ h4 {
   .form-control {
     width: 80%; }
   
-  .boton {
+  #boton {
+    position:absolute;
+    left: 76%;
+    font-weight: 700;
     background-color: #cf6983;
     border-color: #cf6983; }
